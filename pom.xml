@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.own.simple</groupId>
+    <groupId>com.example.simple</groupId>
     <artifactId>simple-spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 

@@ -1,4 +1,4 @@
-package org.own.simple;
+package com.example.simple;
 
 /**
  * BeanDefinition
