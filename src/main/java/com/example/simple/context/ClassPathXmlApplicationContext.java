@@ -1,7 +1,11 @@
 package com.example.simple.context;
 
 import com.example.simple.beans.BeanDefinition;
-import com.example.simple.core.*;
+import com.example.simple.beans.BeanFactory;
+import com.example.simple.beans.SimpleBeanFactory;
+import com.example.simple.beans.XmlBeanDefinitionReader;
+import com.example.simple.core.ClassPathXmlResource;
+import com.example.simple.core.Resource;
 
 /**
  * @author zhaozhongyuan
@@ -23,13 +27,25 @@ public class ClassPathXmlApplicationContext implements BeanFactory {
         this.beanFactory = beanFactory;
     }
 
+
+    //这是对外的一个方法，让外部程序从容器中获取Bean实例，会逐步演化成核心方法
+    @Override
+    public Object getBean(String beanName) {
+        return this.beanFactory.getBean(beanName);
+    }
+
+    @Override
+    public Boolean containsBean(String name) {
+        return this.beanFactory.containsBean(name);
+    }
+
+    @Override
+    public void registerBean(String beanName, Object obj) {
+        this.beanFactory.registerBean(beanName, obj);
+    }
+
     @Override
     public void registerBeanDefinition(BeanDefinition beanDefinition) {
         this.beanFactory.registerBeanDefinition(beanDefinition);
-    }
-
-    //这是对外的一个方法，让外部程序从容器中获取Bean实例，会逐步演化成核心方法
-    public Object getBean(String beanName) {
-        return this.beanFactory.getBean(beanName);
     }
 }

@@ -1,7 +1,7 @@
-package com.example.simple.core;
+package com.example.simple.beans;
 
 import com.example.simple.beans.BeanDefinition;
-import com.example.simple.core.BeanFactory;
+import com.example.simple.beans.BeanFactory;
 import com.example.simple.core.Resource;
 import org.dom4j.Element;
 

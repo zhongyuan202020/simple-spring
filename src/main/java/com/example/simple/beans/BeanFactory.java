@@ -1,4 +1,4 @@
-package com.example.simple.core;
+package com.example.simple.beans;
 
 import com.example.simple.beans.BeanDefinition;
 import com.example.simple.beans.BeansException;
@@ -11,6 +11,11 @@ import com.example.simple.beans.BeansException;
 public interface BeanFactory {
 
     Object getBean(String beanName) throws BeansException;
+
+
+    Boolean containsBean(String name);
+
+    void registerBean(String beanName, Object obj);
 
     void registerBeanDefinition(BeanDefinition beanDefinition);
 }
